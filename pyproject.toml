@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "easymutate"
+version = "0.1.0"
+description = ""
+authors = ["Deverty <bychenkov.a.k@edu.mirea.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mutmut = "^2.4.3"
+cosmic-ray = "^8.3.7"
+types-setuptools = "^67.6.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[mutmut]
+paths_to_mutate="src/"
+backup="False"
+tests_dir="tests/"
+
+[cosmic-ray]
+module-path = "src"
+timeout = 10.0
+excluded-modules = []
+test-command = "pytest"
+
+[cosmic-ray.distributor]
+name="local"
+
+[easymutate]
+module_path = "src"
+test_command = "pytest"

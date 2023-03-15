@@ -1,0 +1,492 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><title>Cosmic Ray Report</title></head><body><div class="container"><h1><p class="text-dark">Cosmic Ray Report</p></h1></div><div class="container"><div class="mb-1" id="summary_info___accordion"><div class="card"><a data-toggle="collapse" data-target="#summary_info___collapse_1" aria-expanded="true" aria-controls="summary_info___collapse_1" href="#"><div class="card-header" id="summary_info___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Summary info</h4></button></div></a><div aria-labelledby="summary_info___heading_1" data-parent="#summary_info___accordion" class="collapse show" id="summary_info___collapse_1"><div class="card-body"><p>Date time: 14/03/2023 23:08:11</p><p>Total jobs: 11</p><p>Complete: 11 (100.00%)</p><p>Surviving mutants: 2 (18.18%)</p></div></div></div></div><div class="mb-1" id="job_list___accordion"><div class="card"><a data-toggle="collapse" data-target="#job_list___collapse_1" aria-expanded="false" aria-controls="job_list___collapse_1" href="#"><div class="card-header" id="job_list___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Job list</h4></button></div></a><div aria-labelledby="job_list___heading_1" data-parent="#job_list___accordion" class="collapse" id="job_list___collapse_1"><div class="card-body"><div class="text-right mb-1"><div class="mx-1" id="job_item_expand_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('show');"><button class="btn btn-outline-dark"><span>Expand All</span></button></a></div><div class="mx-1" id="job_item_collapse_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('hide');"><button class="btn btn-outline-dark"><span>Collapse All</span></button></a></div></div><div class="mb-1" id="job_list___sub_accordion_1"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_1_1" aria-expanded="false" aria-controls="job_list___sub_collapse_1_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_1_1"><button class="btn btn-outline-success"><span class="job_id">1 : Job ID 12d92986dd174fa49f9fd11a092513ed</span></button></div></a><div aria-labelledby="job_list___sub_heading_1_1" data-parent="#job_list___sub_accordion_1" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_1_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Sub, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a - b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert -1 == 3
+
+E        +  where -1 = &lt;function add at 0x0000029254480900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x0000029254480900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert -1 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_2"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_2_1" aria-expanded="false" aria-controls="job_list___sub_collapse_2_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_2_1"><button class="btn btn-outline-success"><span class="job_id">2 : Job ID 17b700a6bf43484c92641ca646f4b86e</span></button></div></a><div aria-labelledby="job_list___sub_heading_2_1" data-parent="#job_list___sub_accordion_2" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_2_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Mul, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a * b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 2 == 3
+
+E        +  where 2 = &lt;function add at 0x000001DFA9C80900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x000001DFA9C80900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 2 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_3"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_3_1" aria-expanded="false" aria-controls="job_list___sub_collapse_3_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_3_1"><button class="btn btn-outline-success"><span class="job_id">3 : Job ID 7082792190bc403c8f1e1590a4032d71</span></button></div></a><div aria-labelledby="job_list___sub_heading_3_1" data-parent="#job_list___sub_accordion_3" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_3_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Div, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a / b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 0.5 == 3
+
+E        +  where 0.5 = &lt;function add at 0x0000025C90500900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x0000025C90500900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 0.5 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_4"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_4_1" aria-expanded="false" aria-controls="job_list___sub_collapse_4_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_4_1"><button class="btn btn-outline-success"><span class="job_id">4 : Job ID b90bd3c7bc35495596f35aca46e1c481</span></button></div></a><div aria-labelledby="job_list___sub_heading_4_1" data-parent="#job_list___sub_accordion_4" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_4_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_FloorDiv, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a // b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 0 == 3
+
+E        +  where 0 = &lt;function add at 0x00000209E1E00900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x00000209E1E00900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 0 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_5"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_5_1" aria-expanded="false" aria-controls="job_list___sub_collapse_5_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_5_1"><button class="btn btn-outline-success"><span class="job_id">5 : Job ID 3ee92ae715ff42f69237da998f71a638</span></button></div></a><div aria-labelledby="job_list___sub_heading_5_1" data-parent="#job_list___sub_accordion_5" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_5_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Mod, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a % b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 1 == 3
+
+E        +  where 1 = &lt;function add at 0x000002085A020900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x000002085A020900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 1 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_6"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_6_1" aria-expanded="false" aria-controls="job_list___sub_collapse_6_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_6_1"><button class="btn btn-outline-success"><span class="job_id">6 : Job ID 6cb2b76b35e248ecaeea9a4cffb44e1a</span></button></div></a><div aria-labelledby="job_list___sub_heading_6_1" data-parent="#job_list___sub_accordion_6" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_6_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_Pow, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a ** b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 1 == 3
+
+E        +  where 1 = &lt;function add at 0x000002250BDA0900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x000002250BDA0900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 1 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_7"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_7_1" aria-expanded="false" aria-controls="job_list___sub_collapse_7_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_7_1"><button class="btn btn-outline-success"><span class="job_id">7 : Job ID a50d8d5b89c04a31a94047f644c9764c</span></button></div></a><div aria-labelledby="job_list___sub_heading_7_1" data-parent="#job_list___sub_accordion_7" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_7_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_RShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a &gt;&gt; b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 0 == 3
+
+E        +  where 0 = &lt;function add at 0x0000021538410900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x0000021538410900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 0 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_8"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_8_1" aria-expanded="false" aria-controls="job_list___sub_collapse_8_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_8_1"><button class="btn btn-outline-success"><span class="job_id">8 : Job ID bc6b80443321498a829c3f96e5e95feb</span></button></div></a><div aria-labelledby="job_list___sub_heading_8_1" data-parent="#job_list___sub_accordion_8" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_8_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_LShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a &lt;&lt; b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 4 == 3
+
+E        +  where 4 = &lt;function add at 0x00000248437E0900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x00000248437E0900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 4 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_9"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_9_1" aria-expanded="false" aria-controls="job_list___sub_collapse_9_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_9_1"><button class="btn btn-outline-danger"><span class="job_id">9 : Job ID 174ae7eca3ed42078b680c5cae53a843</span></button></div></a><div aria-labelledby="job_list___sub_heading_9_1" data-parent="#job_list___sub_accordion_9" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_9_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_BitOr, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a | b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py .                                                     [100%]
+
+
+
+============================== 1 passed in 0.01s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_10"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_10_1" aria-expanded="false" aria-controls="job_list___sub_collapse_10_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_10_1"><button class="btn btn-outline-success"><span class="job_id">10 : Job ID 242c1193f5194df7b4b2556a2dd28a63</span></button></div></a><div aria-labelledby="job_list___sub_heading_10_1" data-parent="#job_list___sub_accordion_10" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_10_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_BitAnd, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a &amp; b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py F                                                     [100%]
+
+
+
+================================== FAILURES ===================================
+
+__________________________________ test_add ___________________________________
+
+
+
+    def test_add():
+
+&gt;       assert math_module.add(1, 2) == 3
+
+E       assert 0 == 3
+
+E        +  where 0 = &lt;function add at 0x00000234EE110900&gt;(1, 2)
+
+E        +    where &lt;function add at 0x00000234EE110900&gt; = math_module.add
+
+
+
+tests\test_math.py:5: AssertionError
+
+=========================== short test summary info ===========================
+
+FAILED tests/test_math.py::test_add - assert 0 == 3
+
+============================== 1 failed in 0.06s ==============================
+
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_11"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_11_1" aria-expanded="false" aria-controls="job_list___sub_collapse_11_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_11_1"><button class="btn btn-outline-danger"><span class="job_id">11 : Job ID b5077e07c0c5450fb125d9d8daf5fd67</span></button></div></a><div aria-labelledby="job_list___sub_heading_11_1" data-parent="#job_list___sub_accordion_11" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_11_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.SURVIVED</p></div></div><pre class="location"><a href="pycharm://open?file=src\math_module.py&amp;line=2" class="text-secondary"><button class="btn btn-outline-dark">src\math_module.py, start pos: (2, 13), end pos: (2, 14)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Add_BitXor, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc\math_module.py
++++ bsrc\math_module.py
+@@ -1,3 +1,3 @@
+ def add(a: float, b: float) -&gt; float:
+-    return a + b
++    return a ^ b
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+
+platform win32 -- Python 3.11.0, pytest-7.2.0, pluggy-1.0.0
+
+rootdir: C:\VS Code Projects\easymutate
+
+plugins: anyio-3.6.2
+
+collected 1 item
+
+
+
+tests\test_math.py .                                                     [100%]
+
+
+
+============================== 1 passed in 0.01s ==============================
+
+</pre></div></div></div></div></div></div></div></div></div></div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script type="text/javascript">$('div.job_list___sub_multi_collapse').on('shown.bs.collapse',  function () {    correct_behavior_functional_buttons();  });$('div.job_list___sub_multi_collapse').on('hidden.bs.collapse',  function () {    correct_behavior_functional_buttons();  });function correct_behavior_functional_buttons() {    var expand = false;    var collapse = false;    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'false') {        expand = true;        return false;      };    });    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'true') {        collapse = true;        return false;      };    });    if (expand) {      $('div#job_item_expand_all').css('display', 'inline-block');    } else {      $('div#job_item_expand_all').css('display', 'none');    };    if (collapse) {      $('div#job_item_collapse_all').css('display', 'inline-block');    } else {      $('div#job_item_collapse_all').css('display', 'none');    };  };correct_behavior_functional_buttons();</script></body></html>
